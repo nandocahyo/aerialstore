@@ -12,9 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth'], function(){
+	Route::get('/home', 'HomeController@index')->name('home');
+	Route::resource('dashboard','DashboardController');
+	Route::resource('kategori','KategoriController');
+	Route::resource('produk','ProdukController');
+	Route::resource('customer','CustomerController');
+
+	Route::get('barcode','ProdukController@printBarcode')->name('produk.barcode');
+	Route::get('chart','DashboardController@chartshow');
+});
+
+//tes template admin
+Route::get('/tes', function () {
+    return view('admin.master');
+});
