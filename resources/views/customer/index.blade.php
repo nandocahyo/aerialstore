@@ -5,9 +5,7 @@
                             <div class="header">
                                 <h4 class="title">Data Customer</h4>
                                 <a href="{{ route('customer.create')}}" class="btn btn-success btn-fill btn-sm"><i class="fa fa-plus-circle"></i>Tambah Customer</a>
-                                <a href="#" class="btn btn-warning btn-fill btn-sm"><i class="fa fa-file"></i>Print PDF</a>
-
-    
+                                
                             </div>
                             <div class="content table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

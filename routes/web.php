@@ -24,8 +24,15 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::resource('produk','ProdukController');
 	Route::resource('customer','CustomerController');
 
+	Route::get('transaksi','TransaksiController@index')->name('transaksi.index');
+	Route::post('transaksi','TransaksiController@store')->name('transaksi.store');
+	Route::delete('transaksi/{id}','TransaksiController@destroy')->name('transaksi.destroy');
+	Route::get('transaksi/update','TransaksiController@update')->name('transaksi.update');
+
 	Route::get('barcode','ProdukController@printBarcode')->name('produk.barcode');
 	Route::get('chart','DashboardController@chartshow');
+	Route::get('laporan','TransaksiController@laporan')->name('transaksi.laporan');
+
 });
 
 //tes template admin

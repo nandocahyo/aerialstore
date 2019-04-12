@@ -56,7 +56,7 @@
                             <div class="form-group row">
                                     <label class="col-md-2 col-form-label text-md-right">Harga</label>
                                     <div class="col-md-6">
-                                      {!! Form::number('harga',null,['class'=>'form-control']) !!}
+                                      {!! Form::text('harga',null,['class'=>'form-control']) !!}
                                     </div>
                             </div>
 
@@ -69,5 +69,10 @@
                           </div>
                       </div>
 
+<!-- <script type="text/javascript">
+  $(document).ready(function(){
+    $('.duit').mask('000.000.000', {reverse:true});
+  });
+</script> -->
                             
 @endsection

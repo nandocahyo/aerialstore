@@ -94,13 +94,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="transaksi">
                         <i class="pe-7s-note2"></i>
                         <p>Transaksi</p>
                     </a>
                 </li>
                  <li>
-                    <a href="typography.html">
+                    <a href="laporan">
                         <i class="pe-7s-print"></i>
                         <p>Laporan</p>
                     </a>
@@ -211,7 +211,8 @@
     <script src="{{url('assets/source/js/jquery.3.2.1.min.js')}}" type="text/javascript"></script>
     <script src="{{url('assets/source/js/bootstrap.min.js')}}" type="text/javascript"></script>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+
     <!--  Charts Plugin -->
     <script src="{{url('assets/source/js/chartist.min.js')}}"></script>
 
@@ -239,13 +240,9 @@
 
             demo.initChartist();
 
-            $.notify({
-                icon: 'pe-7s-global',
-                message: "Selamat datang di <b>AerialStore</b> - Semoga harimu menyenangkan"
-
-            },{
+            {
                 type: 'info',
-                timer: 4000
+                timer: 1000
             });
 
         });

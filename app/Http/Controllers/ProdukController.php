@@ -46,6 +46,7 @@ class ProdukController extends Controller
     private function getRequest(Request $request)
     {
         $photo          = $request->file('foto');
+        if (empty($photo)) return $request->all();
         $filename       = $photo->getClientOriginalName();
         $destination    = base_path() . '/public/uploads';
         $photo->move($destination, $filename);

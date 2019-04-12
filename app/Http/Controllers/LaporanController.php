@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \Charts;
-use App\Kategori;
-use App\Produk;
-use App\Customer;
 use App\Transaksi;
 
-class DashboardController extends Controller
+class LaporanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,11 +14,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $categori = Kategori::count();
-        $product = Produk::count();
-        $customer = Customer::count();
-        $transaction = Transaksi::count();
-        return view('dashboard.index', compact('categori', 'product', 'customer','transaction'));
+        return view('laporan.index');
     }
 
     /**
@@ -89,15 +81,5 @@ class DashboardController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function chartshow(){
-       $chart = Charts::database(query::all(), 'bar','highcharts')
-       ->elementLabel("Total")
-       ->dimensions(1000, 500)
-       ->responsive(false)
-       ->groupBy('nama');
-
-       return view('chart', ['chart' => $chart]);
     }
 }

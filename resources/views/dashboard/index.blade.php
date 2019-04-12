@@ -21,19 +21,38 @@
                         <div class="card">
 
                             <div class="header">
-                                <h4 class="title">Grafik Penjualan</h4>
+                                <h4 class="title">Statistik</h4>
                             </div>
                             <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
 
-                                <div class="footer">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Bounce
-                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
-                                    </div>
-                                </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Nama</th>
+                                        <th>Jumlah</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Kategori</td>
+                                            <td style="color: #f4425f">{{$categori}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Produk</td>
+                                            <td style="color: #f4425f">{{$product}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Customer</td>
+                                            <td style="color: #f4425f">{{$customer}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Transaksi</td>
+                                            <td style="color: #f4425f">{{$transaction}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
                             </div>
                         </div>
-                    </div>      
+                    </div>     
 @endsection
