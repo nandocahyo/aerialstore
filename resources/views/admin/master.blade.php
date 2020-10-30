@@ -37,6 +37,7 @@
     <!-- jQuery datatables -->
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/senna@2.7.7/build/globals/senna-debug.js" type="text/javascript"></script>
     <!-- DataTables -->
     <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
     <!-- Bootstrap JavaScript -->

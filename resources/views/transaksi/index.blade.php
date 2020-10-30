@@ -66,6 +66,7 @@
                                 <tr>
                                     <td colspan="5"><p align="right">Total</p>
                                     </td><td>{{$total}}</td>
+                                    <input type="text" value="{{$total}}" style="width:20%;" required disabled>
                                 </tr>
                     </table>
                 </div>
